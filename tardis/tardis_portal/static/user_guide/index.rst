@@ -1,27 +1,27 @@
 ##############################
-MyTardis Quick Reference Guide
+Store.ammrf Quick Reference Guide
 ##############################
 
-Accessing MyTardis
+Accessing Store.ammrf
 ==================
 
-MyTardis can be accessed with any web browser. Your data can be accessed by
+Store.ammrf can be accessed with any web browser. Your data can be accessed by
 clicking on the login link and entering your credentials.
 
-Browsing and Sharing Experiments
+Browsing and Sharing Projects
 ================================
 
-MyTardis organises data by Experiments. Each Experiment contains many
-datasets. Each dataset gives users the ability to browse and download datafiles.
+Store.ammrf organises data by Projects. Each Project contains many
+experiments. Each experiment gives users the ability to browse and download datafiles.
 
-Clicking on the name of an Experiment will load a new page which
-displays descriptive information pertaining to the Experiment as well a list
-of its datasets. There are two tabs on the left: Description and Metadata.
+Clicking on the name of a Project will load a new page which
+displays descriptive information pertaining to the Project as well a list
+of its experiments. There are two tabs on the left: Description and Metadata.
 
 .. image:: images/exp.png
    :width: 100%
 
-The number of datasets and files within an Experiment, as well as the total
+The number of experiments and files within a Project, as well as the total
 size, date uploaded and access rights are displayed near the top of the page.
 
 .. image:: images/exp_stats.png
@@ -29,12 +29,12 @@ size, date uploaded and access rights are displayed near the top of the page.
 **Description**
 
 The Description tab is loaded by default whenever an
-Experiment is accessed through the interface and displays detailed information
-about the Experiment. The information provided may include the institution
-that ran the Experiment, the licensing arrangement that governs it, as well as
-the Experiment's administrator(s). More information (if any has been provided)
-about the Experiment can be accessed by clicking on the |description|
-button. The Description tab also allows an Experiment's datasets to be
+Project is accessed through the interface and displays detailed information
+about the Project. The information provided may include the institution
+that ran the Project, the licensing arrangement that governs it, as well as
+the Project's administrator(s). More information (if any has been provided)
+about the Project can be accessed by clicking on the |description|
+button. The Description tab also allows a Project's experiments to be
 downloaded in their entirety as a single archive by clicking on the |tar|
 button.
 
@@ -44,45 +44,45 @@ button.
 
 **Metadata**
 
-The Metadata tab displays detailed metadata information about an Experiment if
+The Metadata tab displays detailed metadata information about a Project if
 available.
 
 .. image:: images/exp_metadata.png
 
-**Sharing Experiments**
+**Sharing Projects**
 
 The *Sharing* tab displays information about the people and/or groups that
-currently have access to the Experiment, and also allows users or groups to be
+currently have access to the Project, and also allows users or groups to be
 provided with access. The tab displays the current level of access, the
-licence that governs the Experiment, and also displays a list of the
+licence that governs the Project, and also displays a list of the
 individual users and groups that have been provided with access.
 
-Levels of access to experiments are as follows:
+Levels of access to projects are as follows:
 
   - Read: Users can view and download, but not edit metadata or add data.
   - Edit: Users can view and download, and freely edit metadata and add data.
-  - Owner: Users have all the above permissions, and can share this experiment with others.
+  - Owner: Users have all the above permissions, and can share this project with others.
 
 Another access mechanism is provided via temporary access links. These
-temporary links can be created by experiment owners and sent to collaborators,
+temporary links can be created by project owners and sent to collaborators,
 including ones external to the lab or institution. Temporary links provide
-read-only (and download) access for a single experiment.
+read-only (and download) access for a single project.
 
 .. image:: images/sharing.png
    :width: 100%
 
-Accessing and Downloading Datasets
+Accessing and Downloading Experiments
 ----------------------------------
 
-The names of accessible datasets are listed in the right-most pane displayed
-in the Experiment page. Datasets containing files can be accessed by clicking
-on the name of the relevant dataset. The number of individual files within
-each dataset and the total size of the dataset are displayed to the right of
+The names of accessible experiments are listed in the right-most pane displayed
+in the Project page. Experiments containing files can be accessed by clicking
+on the name of the relevant experiment. The number of individual files within
+each experiment and the total size of the experiment are displayed to the right of
 each entry.
 
-Clicking on the checkbox (|checkbox|) to the left of a dataset will select it
+Clicking on the checkbox (|checkbox|) to the left of an experiment will select it
 and allow the data to be downloaded by clicking on the |download_datasets|
-button. The text box above the dataset list can be used to filter datasets by
+button. The text box above the experiment list can be used to filter experiments by
 title.
 
 .. |checkbox| image:: images/checkbox.png
@@ -91,18 +91,18 @@ title.
 
 .. image:: images/exp_datasets.png
 
-**Downloading Datasets**
+**Downloading Experiments**
 
-Datasets can be viewed by clicking on their title in the Experiment page. The
-files in a dataset will be displayed on the right-hand side of the page and
-descriptive metadata will be displayed on the left. If the dataset contains
+Experiments can be viewed by clicking on their title in the Project page. The
+files in an experiment will be displayed on the right-hand side of the page and
+descriptive metadata will be displayed on the left. If the experiment contains
 image data, previews will be displayed on the left. Clicking on a preview
 image will display the image at a larger resolution.
 
 .. image:: images/dataset.png
    :width: 100%
 
-The files in a dataset can be viewed in the browser, with 100 files for each
+The files in an experiment can be viewed in the browser, with 100 files for each
 page appearing by default. They can be downloaded either as a single archive
 (via |tar|) or individually (via the |download| button next to each
 file). Clicking on the checkbox to the left of a file will select it and allow
