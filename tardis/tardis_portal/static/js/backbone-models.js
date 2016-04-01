@@ -255,7 +255,7 @@ var MyTardis = (function(){
 		return Mustache.to_html(
 		    Mustache.TEMPLATES['tardis_portal/badges/size'],
 		    {
-			'title': _.sprintf("Dataset size is ",
+			'title': _.sprintf("Experiment size is ",
 					   this.size_human_readable),
 			'label': this.size_human_readable
 		    },

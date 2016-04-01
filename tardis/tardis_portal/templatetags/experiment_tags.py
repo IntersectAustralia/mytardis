@@ -31,7 +31,7 @@ def experiment_datasets_badge(experiment):
     """
     count = experiment.datasets.all().count()
     return render_mustache('tardis_portal/badges/dataset_count', {
-        'title': "%d dataset%s" % (count, pluralize(count)),
+        'title': "%d experiment%s" % (count, pluralize(count)),
         'count': count,
     })
 
@@ -69,6 +69,6 @@ def experiment_size_badge(experiment):
     """
     size = filesizeformat(experiment.get_size())
     return render_mustache('tardis_portal/badges/size', {
-        'title': "Experiment size is ~%s" % size,
+        'title': "Project size is ~%s" % size,
         'label': size,
     })

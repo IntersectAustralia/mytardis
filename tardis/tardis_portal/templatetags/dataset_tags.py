@@ -31,7 +31,7 @@ def dataset_tiles(experiment, include_thumbnails):
         def experiment_badge(self):
             count = len(self.experiments)
             return render_mustache('tardis_portal/badges/experiment_count', {
-                'title': "In %d experiment%s" % (count, pluralize(count)),
+                'title': "In %d project%s" % (count, pluralize(count)),
                 'count': count,
             })
 
@@ -65,7 +65,7 @@ def dataset_experiments_badge(dataset):
     """
     count = dataset.experiments.all().count()
     return render_mustache('tardis_portal/badges/experiment_count', {
-        'title': "In %d experiment%s" % (count, pluralize(count)),
+        'title': "In %d project%s" % (count, pluralize(count)),
         'count': count,
     })
 
@@ -91,6 +91,6 @@ def dataset_size_badge(dataset=None, size=None):
     else:
         size = filesizeformat(size)
     return render_mustache('tardis_portal/badges/size', {
-        'title': "Dataset size is ~%s" % size,
+        'title': "Experiment size is ~%s" % size,
         'label': size,
     })

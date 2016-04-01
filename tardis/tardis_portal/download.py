@@ -495,14 +495,14 @@ def streaming_download_datafiles(request):  # too complex # noqa
         else:
             return render_error_message(
                 request,
-                'No Datasets or Datafiles were selected for downloaded',
+                'No Experiments or Datafiles were selected for downloaded',
                 status=404)
 
     elif 'url' in request.POST:
         if len(request.POST.getlist('url')) != 0:
             return render_error_message(
                 request,
-                'No Datasets or Datafiles were selected for downloaded',
+                'No Experiments or Datafiles were selected for downloaded',
                 status=404)
 
         for url in request.POST.getlist('url'):
@@ -517,7 +517,7 @@ def streaming_download_datafiles(request):  # too complex # noqa
                 df_set = set([datafile])
     else:
         return render_error_message(
-            request, 'No Datasets or Datafiles were selected for downloaded',
+            request, 'No Experiments or Datafiles were selected for downloaded',
             status=404)
 
     logger.info('Files for archive command: %s' % df_set)
@@ -526,7 +526,7 @@ def streaming_download_datafiles(request):  # too complex # noqa
         return render_error_message(
             request,
             'You do not have download access for any of the '
-            'selected Datasets or Datafiles ',
+            'selected Experiments or Datafiles ',
             status=403)
 
     try:

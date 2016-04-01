@@ -484,7 +484,7 @@ class ExperimentView(TemplateView):
             {'name': 'Metadata',
              'viewfn': 'tardis.tardis_portal.views.retrieve_experiment_metadata'},
             {'name': 'Sharing', 'viewfn': 'tardis.tardis_portal.views.share'},
-            {'name': 'Transfer Datasets',
+            {'name': 'Transfer Experiments',
              'viewfn': 'tardis.tardis_portal.views.experiment_dataset_transfer'},
         ]
         appnames = []
@@ -676,7 +676,7 @@ def experiment_index(request):
 def experiment_list_mine(request):
 
     c = {
-        'subtitle': 'My Experiments',
+        'subtitle': 'My Projects',
         'can_see_private': True,
         'experiments': authz.get_owned_experiments(request)
                             .order_by('-update_time'),
@@ -691,7 +691,7 @@ def experiment_list_mine(request):
 def experiment_list_shared(request):
 
     c = {
-        'subtitle': 'Shared Experiments',
+        'subtitle': 'Shared Projects',
         'can_see_private': True,
         'experiments': authz.get_shared_experiments(request)
                             .order_by('-update_time'),
@@ -707,7 +707,7 @@ def experiment_list_public(request):
     private_filter = Q(public_access=Experiment.PUBLIC_ACCESS_NONE)
 
     c = {
-        'subtitle': 'Public Experiments',
+        'subtitle': 'Public Projects',
         'can_see_private': False,
         'experiments': Experiment.objects.exclude(private_filter)
                                          .order_by('-update_time'),
@@ -733,7 +733,7 @@ def create_experiment(request,
     """
 
     c = {
-        'subtitle': 'Create Experiment',
+        'subtitle': 'Create Project',
         'user_id': request.user.id,
     }
 
@@ -791,7 +791,7 @@ def edit_experiment(request, experiment_id,
     """
     experiment = Experiment.objects.get(id=experiment_id)
 
-    c = {'subtitle': 'Edit Experiment',
+    c = {'subtitle': 'Edit Project',
          'experiment_id': experiment_id, }
 
     if request.method == 'POST':
@@ -872,7 +872,7 @@ def control_panel(request):
         experiments = experiments.order_by('title')
 
     c = {'experiments': experiments,
-         'subtitle': 'Experiment Control Panel'}
+         'subtitle': 'Project Control Panel'}
 
     return HttpResponse(render_response_index(request,
                         'tardis_portal/control_panel.html', c))

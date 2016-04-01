@@ -5,7 +5,7 @@
   <br/>
   <label class="dataset-download-box badge badge-info"
          for="dataset-checkbox-{{id}}"
-         title="Mark dataset for download">
+         title="Mark experiment for download">
     <i class="icon-download-alt"></i>
     <input id="dataset-checkbox-{{id}}"
            name="dataset"
@@ -21,7 +21,7 @@
   <p class="js-required">
     <a class="close" rel="tooltip" href="#"
        style="float: none;" onclick="return false;"
-       title="Remove dataset from experiment">
+       title="Remove experiment from project">
       &times;
     </a>
   </p>
@@ -35,7 +35,7 @@
 </div>
 <div class="pull-left ds-thumb" style="margin-right: 10px">
   {{#thumbnail}}
-      <img alt="Thumbnail for Dataset #{{ id }}"
+      <img alt="Thumbnail for experiment #{{ id }}"
            src="{{ thumbnail }}"
            onerror="$(this).parent().append('<canvas></canvas>');$(this).remove();"/>
   {{/thumbnail}}
@@ -49,7 +49,7 @@
     {{ description }}
   {{/description}}
   {{^description}}
-    <em>Dataset #{{id}}</em>
+    <em>Experiment #{{id}}</em>
   {{/description}}
   </a>
 </p>
