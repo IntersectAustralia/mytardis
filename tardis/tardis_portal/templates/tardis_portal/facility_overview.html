@@ -106,7 +106,7 @@
                         <div class="alert" ng-show="showDataUnvailableAlert()">
                             <strong>No data available.</strong>
                             {{selectedFacilityName}} is not associated with any
-                            datasets.
+                            experiments.
                             Please check that your desktop client is configured
                             configured to assign the correct
                             <em>instrument</em>
@@ -135,13 +135,13 @@
                             <!-- Latest data view -->
                             <div ng-show="isDataViewSelected(1)">
                                 <h2>Latest {{selectedFacilityName}}
-                                    datasets</h2>
+                                    experiments</h2>
                                 <table class="table table-striped table-bordered table-condensed">
                                     <tr>
                                         <th>Owner</th>
                                         <th>Group</th>
-                                        <th>Experiment</th>
-                                        <th>Dataset description</th>
+                                        <th>Project</th>
+                                        <th>Experiment description</th>
                                         <th>Instrument</th>
                                         <th>Created</th>
                                         <th></th>
@@ -189,14 +189,14 @@
                             </div>
                             <!-- Data sorted by instrument view -->
                             <div ng-show="isDataViewSelected(2)">
-                                <h2>Latest {{selectedFacilityName}} datasets by
+                                <h2>Latest {{selectedFacilityName}} experiments by
                                     instrument</h2>
                                 <table class="table table-striped table-bordered table-condensed">
                                     <tr>
                                         <th>Owner</th>
                                         <th>Group</th>
-                                        <th>Experiment</th>
-                                        <th>Dataset description</th>
+                                        <th>Project</th>
+                                        <th>Experiment description</th>
                                         <th>Created</th>
                                         <th></th>
                                     </tr>
@@ -249,12 +249,12 @@
                             </div>
                             <!-- Data sorted by user view -->
                             <div ng-show="isDataViewSelected(3)">
-                                <h2>Latest {{selectedFacilityName}} datasets by
+                                <h2>Latest {{selectedFacilityName}} experiments by
                                     user</h2>
                                 <table class="table table-striped table-bordered table-condensed">
                                     <tr>
-                                        <th>Experiment</th>
-                                        <th>Dataset description</th>
+                                        <th>Project</th>
+                                        <th>Experiment description</th>
                                         <th>Instrument</th>
                                         <th>Created</th>
                                         <th></th>

@@ -6,7 +6,7 @@
         <a title="Add" class="add-metadata btn btn-mini"
            href="{% url 'tardis.tardis_portal.views.add_experiment_par' experiment.id %}">
           <i class="icon-plus"></i>
-          Add Experiment Metadata
+          Add Project Metadata
         </a>
     {% endif %}
 </div>
@@ -29,6 +29,6 @@
     </div>
 {% empty %}
   <div class="alert alert-info">
-    There is no metadata for this experiment.
+    There is no metadata for this project.
   </div>
 {% endfor %}

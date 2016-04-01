@@ -385,7 +385,7 @@ $('#modal-metadata .submit-button').live('click', function() {
 </div>
 
 <div class="page-header">
-  <h4>Dataset</h4>
+  <h4>Experiment</h4>
     <div class="pull-right">
   {% if push_to_enabled and is_authenticated %}
     <a class="btn btn-mini btn-danger" title="Push to..."
@@ -396,10 +396,10 @@ $('#modal-metadata .submit-button').live('click', function() {
     </a>
   {% endif %}
   {% if has_write_permissions and is_authenticated %}
-    <a class="btn btn-warning btn-mini" title="Edit Dataset"
+    <a class="btn btn-warning btn-mini" title="Edit Experiment"
        href="{{ dataset.get_edit_url }}">
       <i class="icon-pencil"></i>
-      Edit Dataset Description
+      Edit Experiment Description
     </a>
   {% endif %}
     </div>
@@ -407,13 +407,13 @@ $('#modal-metadata .submit-button').live('click', function() {
     {% if dataset.description %}
       <span property="dc:title">{{ dataset.description }}</span>
     {% else %}
-      <span>Untitled Dataset</span>
+      <span>Untitled Experiment</span>
     {% endif %}
   </h1>
   {% if from_experiment %}
   <h4 style="padding-top: 4px">
       <small>
-      From the experiment:
+      From the project:
       <a
          class="experiment-link"
          href="{{ from_experiment.get_absolute_url }}">
@@ -425,7 +425,7 @@ $('#modal-metadata .submit-button').live('click', function() {
         {% if other_experiments|length == 1 %}
         <h4 style="padding-top: 4px">
             <small>
-            From the experiment:
+            From the project:
         {% for other_experiment in other_experiments %}
             <a
                class="experiment-link"
@@ -441,7 +441,7 @@ $('#modal-metadata .submit-button').live('click', function() {
   {% if dataset.immutable %}
   <h4 style="padding-top: 4px">
       <small>
-      This experiment has been set to immutable on creation (cannot be modified)
+      This project has been set to immutable on creation (cannot be modified)
       </small>
   </h4>
   {% endif %}
@@ -509,11 +509,11 @@ $('#modal-metadata .submit-button').live('click', function() {
       {% include "tardis_portal/ajax/dataset_metadata.html" %}
     </div>
     <div id="other-experiments-pane">
-        <h3>Other Experiments</h3>
+        <h3>Other Projects</h3>
         <div class="info-box">
         {% if other_experiments|length > 1 %}
         <div>
-        <em>This dataset also appears in these experiments.</em>
+        <em>This experiment also appears in these projects.</em>
         </div>
         <br/>
         <div id="other-experiments-content">
@@ -530,7 +530,7 @@ $('#modal-metadata .submit-button').live('click', function() {
                 {% endfor %}
         </div>
         {% else %}
-        <em>This dataset doesn't appear in any other experiments.</em>
+        <em>This experiment doesn't appear in any other projects.</em>
         {% endif %}
         </div>
     </div>
@@ -559,12 +559,12 @@ $('#modal-metadata .submit-button').live('click', function() {
     <div class="span8">
         {% block downloads %}
             {% if has_download_permissions and dataset.is_online %}
-                <p><b>Download Dataset:</b>
+                <p><b>Download Experiment:</b>
                     {% if organization|length > 1 %}
                         {% for p in protocol %}
                             {% for o in organization %}
                                 <a class="btn btn-primary btn-mini" href="{{p.1}}{{o}}"
-                                   title="Download Entire Experiment as {{p.0|upper}} with {{o}} organization">
+                                   title="Download Entire Project as {{p.0|upper}} with {{o}} organization">
                                     <i class="icon-download-alt"></i>
                                     {% if o == default_organization %}
                                         {{p.0|upper}}
@@ -577,7 +577,7 @@ $('#modal-metadata .submit-button').live('click', function() {
                     {% else %}
                         {% for p in protocol %}
                             <a class="btn btn-primary btn-mini" href="{{p.1}}"
-                               title="Download Entire Dataset as {{p.0|upper}}">
+                               title="Download Entire Experiment as {{p.0|upper}}">
                                 <i class="icon-download-alt"></i>
                                 {{p.0|upper}}
                             </a>
@@ -588,7 +588,7 @@ $('#modal-metadata .submit-button').live('click', function() {
                        class="btn btn-primary btn-mini" title="Download with SFTP">SFTP</a>
                 </p>
             {%  elif has_download_permissions and not dataset.is_online %}
-                <p>Some or all files in this dataset are archived.
+                <p>Some or all files in this experiment are archived.
                 <a href="{% url "cache_dataset" dataset.id %}"
                    id="request-fast-access"
                    class="btn btn-success btn-mini">Retrieve All

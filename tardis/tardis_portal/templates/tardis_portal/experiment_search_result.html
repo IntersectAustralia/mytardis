@@ -25,7 +25,7 @@
       <span>
         <a href="{% url 'tardis_portal.view_experiment' result.sr.pk %}">
         <strong> {{result.sr.datasets.all.count}} </strong>
-        dataset{{result.sr.datasets.all.count|pluralize }}
+        experiment{{result.sr.datasets.all.count|pluralize }}
         </a>
       </span>
       {% if result.dataset_hit %}

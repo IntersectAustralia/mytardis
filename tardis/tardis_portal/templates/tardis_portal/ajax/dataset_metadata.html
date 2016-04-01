@@ -7,11 +7,11 @@
      class="add-metadata btn btn-mini"
      style="margin-right: 20px">
     <i class="icon-plus"></i>
-    Add Dataset Metadata
+    Add Experiment Metadata
   </a>
 </div>
 {% endif %}
-<h3>Dataset Metadata</h3>
+<h3>Experiment Metadata</h3>
 <div class="info-box">
 {% for parameterset in parametersets %}
   {% capture as edit_control %}
@@ -29,7 +29,7 @@
     </div>
 {% empty %}
     <div>
-        There is no metadata for this dataset.
+        There is no metadata for this experiment.
     </div>
 {% endfor %}
 </div>

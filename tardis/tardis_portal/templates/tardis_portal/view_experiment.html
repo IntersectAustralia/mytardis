@@ -238,7 +238,7 @@ $('#modal-metadata .submit-button').click(function() {
   <h4>
     {% if experiment.is_publication %}
     Publication{% if experiment.is_publication_draft %}<small style="font-style:italic;"> draft</small>{% endif %}
-    {% else %}Experiment
+    {% else %}Project
     {% endif %}
   </h4>
   {% if not experiment.public %}
@@ -260,10 +260,10 @@ $('#modal-metadata .submit-button').click(function() {
     </a>
     {% endif %}
     {% if has_write_permissions %}
-    <a class="btn btn-mini btn-warning" title="Edit Experiment"
+    <a class="btn btn-mini btn-warning" title="Edit Project"
        href="{{ experiment.get_edit_url }}" ng-hide="isPublication">
       <i class="icon-pencil"></i>
-      Edit Experiment
+      Edit Project
     </a>
     {% endif %}
   </div>
