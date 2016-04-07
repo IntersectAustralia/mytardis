@@ -47,8 +47,6 @@ button.
 The Metadata tab displays detailed metadata information about a Project if
 available.
 
-.. image:: images/exp_metadata.png
-
 **Sharing Projects**
 
 The *Sharing* tab displays information about the people and/or groups that
